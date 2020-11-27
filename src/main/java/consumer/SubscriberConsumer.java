@@ -60,6 +60,7 @@ public class SubscriberConsumer {
                             break;
                         case "/exit":
                             isRun = false;
+                            channel.queueDelete(queueName);
                             break;
                     }
                 }
